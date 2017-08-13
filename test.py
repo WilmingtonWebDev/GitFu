@@ -14,7 +14,10 @@ class TestMain(unittest.TestCase):
         ('wahed@hogwarts.com',          'Yes'),
         ('raida@Hogwarts.com',          'No'),
         ('riddho@hogwarts.com',         'No'),
-        ('Raida@hogwarts.com',          'No')
+        ('Raida@hogwarts.com',          'No'),
+        ('raida@Hogwarts.com',          'No'),
+        ('raida@hogWarts.com',          'No'),
+        ('raida@hogwarts.Com',          'No')
     )
     @unpack
     def test_main_squares(self, email, result):
