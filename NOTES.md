@@ -4,11 +4,15 @@
     git add -patch              | git add -p
     git add --update            | git add -u
 
+    git bisect
+
     git branch <branch>
     git branch --delete <branch>    | git branch -d <branch>
 
     git checkout <branch>
     git checkout -b <branch>
+
+    git cherry-pick <commit>
 
     git commit
 
@@ -68,3 +72,22 @@
 
     git co = git checkout
     git ds =  git diff --staged
+
+
+# Clever stuff git does
+
+## Works out when you've moved files
+
+    mkdir foo
+    mv -t foo *.json
+    git status -sb
+    git add foo
+    git status -sb
+    add add -p
+    git status -sb
+
+
+# Simple git server
+
+From https://gist.github.com/datagrok/5080545
+git config --global alias.serve "daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/"
