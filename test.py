@@ -8,14 +8,14 @@ from main import main
 class TestMain(unittest.TestCase):
 
     @data(
-        ([1],       [1]),
-        ([2],       [4]),
-        ([3],       [9]),
-        ([1, 2, 3], [1, 4, 9]),
+        ('dumbledore@hogwarts.com',     'No'),
+        ('mcgonagall@hogwarts.owlery',  'No'),
+        ('riddho@hogwarts.com',         'No'),
+        ('wahed@hogwarts.com',          'Yes')
     )
     @unpack
-    def test_main_squares(self, numbers, output):
+    def test_main_squares(self, email, result):
         self.assertEqual(
-            main(numbers),
-            output
+            main(email),
+            result
         )

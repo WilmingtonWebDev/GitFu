@@ -1,2 +1,8 @@
-def main(numbers):
-	return [x**2 for x in numbers]
+import re
+
+hogwarts_email_pattern = re.compile('[A-Za-z]{5}@hogwarts.com')
+
+def main(email):
+	if hogwarts_email_pattern.match(email):
+		return 'Yes'
+	return 'No'
