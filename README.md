@@ -61,3 +61,8 @@ git bisect reset
 ```
 
 We know know the commit with sha-1 hash `fd9747757bf21f617abc508d8e9f6c15fdb6343d` introduced the bug.
+
+
+# Futher examples
+
+The following [You Tube Video](https://www.youtube.com/watch?v=P3ZR_s3NFvM) shows how git bisect can be used to track down bugs during web development.
