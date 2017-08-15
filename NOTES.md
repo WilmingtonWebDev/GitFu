@@ -3,6 +3,7 @@
     git add <filename_pattern>
     git add -patch              | git add -p
     git add --update            | git add -u
+    git add --interactive       | git add -i
 
     git bisect
 
@@ -19,7 +20,6 @@
     git config
 
     git diff HEAD | git diff
-    git diff g
 
     git log
     git log --patch             | git log -p
@@ -91,3 +91,28 @@
 
 From https://gist.github.com/datagrok/5080545
 git config --global alias.serve "daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/"
+
+# Custom Commands
+
+Create a executable on your PATH with the naming convention `git-{custom}`
+
+```
+cat << EOF | sudo tee /usr/bin/git-fu
+#!/usr/bin/env python2
+
+print "GitFu!"
+EOF
+```
+
+Try out your new command
+
+```
+git fu
+>> GitFu!
+```
+
+# Built in tools
+
+```
+git instaweb --start/--stop
+```
